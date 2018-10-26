@@ -28,6 +28,7 @@ class Tag extends Model
     protected $fillable = [
         'name',
         'normalized',
+        'description',
     ];
 
     /**

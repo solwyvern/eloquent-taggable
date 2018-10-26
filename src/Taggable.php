@@ -405,6 +405,10 @@ trait Taggable
     {
         return app(TagService::class)->renameTags($oldTag, $newTag, static::class);
     }
+    public static function editDescription(string $tagName, string $description): int
+    {
+        return app(TagService::class)->editDescription($tagName, $description, static::class)
+    }
 
     /**
      * Get the most popular tags for the called class.

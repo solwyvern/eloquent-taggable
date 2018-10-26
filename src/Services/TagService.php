@@ -327,4 +327,9 @@ class TagService
                 $relatedKeyName => $newTag->getKey(),
             ]);
     }
+    public function editDescription(string $tagName, string $description, $class = null): int
+    {
+        $tag = $this->find($tagName)->update(['description'       => $description]);
+        return $tag;
+    }
 }

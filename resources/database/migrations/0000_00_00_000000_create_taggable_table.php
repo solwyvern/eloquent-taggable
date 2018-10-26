@@ -22,6 +22,7 @@ class CreateTaggableTable extends Migration
                 $table->increments('tag_id');
                 $table->string('name');
                 $table->string('normalized');
+                $table->string('description');
                 $table->timestamps();
 
                 $table->index('normalized');
